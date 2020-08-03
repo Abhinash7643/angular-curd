@@ -8,6 +8,8 @@ import { StudentlistComponent } from './studentlist/studentlist.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateStudentComponent } from './update-student/update-student.component';
+import { FormsModule } from '@angular/forms';
+import { AddstudentComponent } from './addstudent/addstudent.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { UpdateStudentComponent } from './update-student/update-student.componen
     HeaderComponent,
     StudentlistComponent,
     AboutComponent,
-    UpdateStudentComponent
+    UpdateStudentComponent,
+    AddstudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

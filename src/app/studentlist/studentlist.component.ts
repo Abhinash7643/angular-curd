@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./studentlist.component.css']
 })
 export class StudentlistComponent implements OnInit {
+
   students: Observable<Student[]>;
   constructor(
     private studentService : StudenrlistService,
@@ -18,6 +19,7 @@ export class StudentlistComponent implements OnInit {
 
   ngOnInit() {
     this.students = this.studentService.getAllStudents();
+    console.log('oninit called')
   }
 
   reloadData() {
@@ -36,6 +38,10 @@ export class StudentlistComponent implements OnInit {
 
   updateStudent(id: number){
     this.router.navigate(['updateStudent', id]);
+  }
+
+  addStudent(){
+    this.router.navigate(['add-student']);
   }
 
 }

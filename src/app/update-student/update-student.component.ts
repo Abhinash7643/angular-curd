@@ -13,6 +13,7 @@ export class UpdateStudentComponent implements OnInit {
 
   id: number;
   student: Student;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,

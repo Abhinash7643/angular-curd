@@ -34,6 +34,11 @@ export class StudenrlistService {
 
   updateUrl :string = 'http://localhost:8085/api/student';
   updateStudent(value: any): Observable<Object> {
-    return this.http.put(`${this.updateUrl}`, value);
+    return this.http.post(`${this.updateUrl}`, value);
+  }
+
+  addUrl :string = 'http://localhost:8085/api/student';
+  addStudent(value: any): Observable<Object> {
+    return this.http.post(`${this.addUrl}`, value);
   }
 }
